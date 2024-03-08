@@ -7,7 +7,7 @@
 #       check if density is bigger than 90
 #       if no: keep running 
 #       if yes: done
-#       the number of day is how many days that cell density will go over 90 
+#the number of day is how many days that cell density will go over 90 
 density=5
 d=1
 while density<90:
