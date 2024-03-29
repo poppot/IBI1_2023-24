@@ -1,0 +1,1 @@
+Show a plot of the average of all countries' dalys over time
