@@ -4,7 +4,7 @@ population=np.zeros((100,100))
 i1=np.random.randint(0,100)
 i2=np.random.randint(0,100)
 population[i1,i2]=1                                             #create a population with 100*100 individuals and random select a break point
-plt.imshow(population)
+plt.imshow(population,cmap='viridis',vmax=2,vmin=0,interpolation='nearest')
 plt.title('the spatial SIR model of day 1')
 plt.show()                                                      #show the picture of day 1
 plt.cla
