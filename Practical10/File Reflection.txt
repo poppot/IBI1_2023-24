@@ -1,0 +1,3 @@
+In the 'spatial_SIR' work, at the first time, I tried to finish the work by my self. I used about 100 lines of procedure which 
+contain many if. Besides the waste of calculate resource, the procedure also cotain a logic mistake. The procedure give us give
+me another angle to think.
