@@ -2,21 +2,22 @@ import os
 import pandas as pd
 import matplotlib. pyplot as plt
 import numpy as np
+os.chdir(r'C:\Users\52757\Desktop\IBI1_2023-24\Practical7')
 dalys_data = pd.read_csv("dalys-rate-from-all-causes.csv")
-print(dalys_data.iloc[0:101:10,3])
-a=dalys_data.iloc[0:6840,0]
+print(dalys_data.iloc[0:101:10,3])                                 #read0,10,20...100
+a=dalys_data.iloc[0:6840,0]                                        #read contries all lines
 print(a)
 b=[]
 d=[]
-for i in range(0,6840):
-    if a[i]=='Afghanistan':
+for i in a:
+    if i=='Afghanistan':                                           #find all Afghanistan and return a true or false list
         b.append(1==1)
     else:
         b.append(1==2)
-c=dalys_data.iloc[b,3]
+c=dalys_data.iloc[b,3]                                             #through the true or false list find all Afghanistan
 print(c)
 for i in range(0,6840):
-    if a[i]=='China':
+    if a[i]=='China':                                               #find all china
         d.append(1==1)
     else:
         d.append(1==2)
@@ -30,7 +31,7 @@ plt.ylabel("DALYS")
 plt.xlabel('years')
 plt.title('DALYS over time in China')
 plt.show()
-g=dalys_data.iloc[0:6840,2]
+g=dalys_data.iloc[0:6840,2]                        #the column of years
 meanworld=[]
 h=[]
 for i1 in range(1990,2020):
@@ -39,7 +40,7 @@ for i1 in range(1990,2020):
             h.append(1==1)
         else:
             h.append(1==2)
-    j=dalys_data.iloc[h,3]
+    j=dalys_data.iloc[h,3]                         #a list of the dalys in a certain year
     meanworld.append(np.mean(j))
     h=[]
 plt.figure()
