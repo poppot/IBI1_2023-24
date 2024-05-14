@@ -9,7 +9,7 @@ def SIR(vaccination_injection):                     #create a function SIR that 
     for i1 in range(2,1001):
         increase1=0
         increase2=0
-        for i2 in range(0,susceptible-vaccination_injection):
+        for i2 in range(0,susceptible-vaccination_injection):      #the vaccination injected individuals won't be concerned when calculate new infection
             b=0.3*infected/10000
             a=np.random.uniform(0,1)
             if b>a:

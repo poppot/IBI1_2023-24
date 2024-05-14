@@ -12,7 +12,7 @@ for i1 in range(0,999):
     increase2=0                        #let the increase number of infected and recovered return to zero
     for i2 in range(0,susceptible):
         b=0.3*infected/10000
-        a=np.random.uniform(0,1)
+        a=np.random.uniform(0,1)       #create a random number, if it smaller than the possibility of the event, it will happen
         if b>a:
             increase1=increase1+1
     for i3 in range(0,infected):
