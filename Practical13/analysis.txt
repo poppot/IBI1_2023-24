@@ -1,11 +1,11 @@
 the similarity and score between human and mouse are
 0.9253968253968254
-3092
+3137.0
 the similarity and score between human and rat are
 0.9174603174603174
-3063
+3107.0
 the similarity and score between mouse and rat are
 0.9682539682539683
-3208
+3261
 The sequences of mice and rat are most closely related
 The mouse are better is a better model organism	for human because thesimilarity rate between are higher

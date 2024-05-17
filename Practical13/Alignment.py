@@ -1,8 +1,10 @@
 import pandas as pd
 import os
 import re
+import blosum as bl
+matrix = bl.BLOSUM(62)
+print(matrix)
 os.chdir(r'C:\Users\52757\Desktop\IBI1_2023-24\Practical13')         #move to the fold
-matrix=pd.read_excel("BLOSUM62.xlsx")
 human=open('SLC6A4_HUMAN.fa','r',encoding='UTF-8')
 mouse=open('SLC6A4_MOUSE.fa','r',encoding='UTF-8')
 rat=open('SLC6A4_RAT.fa','r',encoding='UTF-8')                       #read matrix and sequences
@@ -21,7 +23,7 @@ def compare(sequence1,sequence2,matrix):                           #a function t
     for i in range(0,len(sequence1)):
         if sequence1[i]==sequence2[i]:
             same=same+1
-        score=matrix.iloc[index[sequence1[i]]-1,index[sequence2[i]]]+score    #use index to find the score in excel
+        score=matrix[sequence1[i]][sequence2[i]]+score                  #use index to find the score in matrix
     same_rate=same/len(sequence1)
     print(same_rate)
     print(score)
